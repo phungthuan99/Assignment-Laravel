@@ -24,11 +24,12 @@ class ProductFactory extends Factory
         return [
             'name' => $this->faker->name,
             'category_id' => $this->faker->numberBetween(1, 10),
+            'image_url' => $this->faker->imageUrl(),
             'description' => $this->faker->text(10, 20),
             'price' => $this->faker->numberBetween(1000000, 30000000),
             'sale_percent' => $this->faker->numberBetween(200000, 5000000),
-            'stocks' => $this->faker->numberBetween(1, 50),
-            'is_active' => $this->faker->numberBetween(0, 1)
+            'stocks' => $this->faker->numberBetween(0, 1000),
+            'is_active' => 1,
         ];
     }
 }

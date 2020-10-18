@@ -16,9 +16,8 @@ class Comment extends Model
         'content',
     ];
 
-    public function ProductUser()
+    public function commentProduct()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
-        return $this->belongsTo(Product::class, 'product_id', 'id');
+        return $this->belongsToMany(User::class, 'comment', 'product_id', 'user_id');
     }
 }

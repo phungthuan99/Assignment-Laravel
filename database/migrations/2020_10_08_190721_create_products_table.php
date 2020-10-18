@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('category_id');
+            $table->string('image_url')->nullable();
             $table->string('description');
             $table->integer('price');
             $table->integer('sale_percent');
